@@ -1,0 +1,56 @@
+Reto 3: Grupo P74_C2
+ Número máximo de ficheros: 4
+Tipo de trabajo:  Individual
+Yugi colecciona cartas para un juego de mesa y siempre crea una lista con los números (identificadores) de las cartas que le falta y crea otra lista con los números (identificadores) de las que tiene para cambiar. Con esas listas realiza cambios con otras personas. Adicionalmente, ha notado que las cartas que colecciona, dependiendo de su rareza (estilo y dificultad de conseguir), son categorizadas diferente, a veces las llaman de tipo 1 (común), 2 (rara), 3 (super rara), 4 (rara secreta), o 5 (ultra rara). Es más, las láminas de un tipo solo son cambiadas por las láminas del mismo tipo. Como Yugi está tomando el curso del MinTic2021, ha decidido crear un programa en Java que le ayude realizando dichos cambios. Para ello ha notado que requiere crear una Clase llamada "Cartas" en Java que conste como mínimo de las siguientes funciones (métodos) que le permitirá construir el programa completo (vale 1):
+
+1. (Vale 1) La función "rarezas" que dada una lista de las rarezas de todas las cartas (en la posición i-ésima de la lista está el tipo de dicha carta), genera una lista con los tipos de láminas sin repetición.
+
+Por ejemplo, si el listado tiene diez cartas y cada una tiene las siguientes rarezas:
+
+rarezas ([1,2,5,5,5,1,2,5,5,5])
+
+la función debe retornar la lista: [1,2,5]
+
+Nótese que las rarezas aparecen solo una vez.
+
+ 
+
+2. (Vale 1) La función "meFaltanDeLaRareza" que dada una lista con los números (identificadores) de cartas que le faltan, la lista de las cartas según la rareza de cada carta y una rareza específica de una carta (en ese orden), le retorne una lista con los números de las cartas de dicha rareza que le faltan.
+
+Por ejemplo, si se ejecuta la función:
+
+meFaltanDeLaRareza ([1,3,6,8], [1,2,5,5,5,1,2,5,5,5], 5)
+
+debe retornar la lista: [3,8]
+
+Nótese que los números de cartas empiezan en cero (0) y van hasta el nueve (9) en este ejemplo (siempre empiezan en cero).
+
+Por ejemplo, si se ejecuta:
+
+meFaltanDeLaRareza ([1,3,6,8], [1,2,5,5,5,1,2,5,5,5], 2)
+
+Se debe retornar la lista: [1,6]
+
+ 
+
+3. (Vale 1) La función "noTengo" que dada una lista con las cartas que tiene otra persona y una lista con las cartas que tiene Yugi, entonces retornar la lista con las cartas que le interesan a Yugi de la otra persona.
+
+Por ejemplo, si se llama:
+
+noTengo([3,5,7,10,15,16],[4,10,5,8])
+
+Se debe retornar la lista: [3,7,15,16]
+
+4. (Vale 1) Para simplificar la primera versión del programa se decidió pensar que todas las cartas son de una misma rareza y que la lista que maneja cada persona indica los números (identificadores) de las cartas que tienen para cambiar y aquellos números que no están en dicha lista son los que necesitan. De esta manera deben crear una función "puedoCambiar" que reciba la lista de cartas que tiene otra persona y la lista de cartas que tiene Yugi y que retorne el número de láminas que pueden cambiar (cantidad).
+
+Por ejemplo, al llamar la función:
+
+puedocambiar([3,5,7,10,15,16],[4,10,5,8])
+
+Debe retornar: 2
+
+Porque a la otra persona sólo le interesan dos láminas que tiene Yugi: [4,8], mientras que a Yugi le interesan cuatro láminas que la otra persona tiene: [3,7,15,16]. Para que sea evaluada correctamente, la función debe retornar un Integer.
+
+Entrada:
+
+Este programa no requiere entrada. Ni generará salida. Se requiere que el estudiante genere un archivo con el nombre Cartas.java sin main y que se respeten los nombres de las funciones dadas, sus parámetros y tipos.
